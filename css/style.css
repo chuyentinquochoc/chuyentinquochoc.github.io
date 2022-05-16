@@ -193,7 +193,6 @@ section img {
 #text {
     position: absolute;
     color: #fff;
-    white-space: nowrap;
     z-index: 9;
     opacity: 1;
     transform: scale(0.8);
