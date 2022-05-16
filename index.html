@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CTQH</title>
+        <meta content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <link href="css/style.css" media="all" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" type="image/png" href="./images/ctqh.png"/>
+        <link href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7COswald:300,400,700" rel="stylesheet" type="text/css"><!-- google fonts end -->
+        <script src="https://kit.fontawesome.com/3e2d5ff50d.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="preloader-bg"></div>
+        <div id="preloader">
+            <div id="preloader-status">
+                <div class="preloader-position loader">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <a href="#home" class="back-home">Back to main page</a>
+        <a href="#" class="copyright">quak © 2022</a>
+        <div id="home">
+            <header>
+                <a href="#" class="logo">CTQH</a>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <br>
+                    <li><a href="#aboutus" id="contact-button">About Us</a></li>
+                    <!--<br><li><a href="#blogs">Blogs</a></li>-->
+                    <br>
+                    <li><a href="#contact" id="contact-button">Contact</a></li>
+                    <br>
+                    <li><a href="#music" id="contact-button">Music</a></li>
+                </ul>
+            </header>
+            <section>
+                <img id="text" src="./images/ctqh.png">
+                <img src="./images/background.jpg" id="bgimg">
+            </section>
+        </div>
+        <div id="aboutus" class="center">
+            <div class="inner-divider-full"></div>
+            <h1 class="heading">About Us</h1>
+
+        </div>
+        <!--<div id="blogs" class="blogs">
+            <div class="innder-divider-full">
+                <h1 class="heading">Blogs</h1>
+                <div class="inner-divider-half"></div>
+                <h2 class="name">Chưa có blog gì :((</h2>
+
+            </div>
+        </div>-->
+        <div id="contact" class="center">
+            <div class="inner-divider-full"></div>
+            <h1 class="heading">Contact</h1>
+            <div class="inner-divider-half"></div>
+            <div class="info"> 
+                <img src="./images/ctqh.png" alt="quak" style="width: 100px;height: 100px;border-radius: 50%;">
+                <br>
+                <h2 class="name">CTQH</h2>
+                <br>
+                <p>
+                    <a class="links" href="https://www.facebook.com/chuyentinquochoc" target="_blank">Facebook</a>
+                </p>
+            </div>
+        </div>
+        <div id="music" class="center">
+            <div class="inner-divider-full"></div>
+            <h1 class="heading">Music Controller</h1>
+            <div class="inner-divider-half"></div>
+            <h4 class="music-heading">Now playing: </h4><br><h4 id="song-name" class="music-heading"></h4>
+                <div class="inner-divider-half"></div>
+                <audio autoplay id="bgmusic"></audio>
+                <span id="current-time" class="music-heading">0:00</span>
+                <div id="timeline">
+                    <div id="playhead"></div>
+                </div>
+                <span id="duration" class="music-heading">0:00</span>
+                <div class="inner-divider-half"></div>
+                <button class="music-heading music-button" id="prev-icon">Prev</button>
+                <button class="music-heading music-button" id="play-icon">PLay</button>
+                <button class="music-heading music-button" id="pause-icon">Pause</button>
+                <button class="music-heading music-button" id="next-icon">Next</button>
+                <div class="inner-divider-half"></div>
+                <button class="music-heading music-button" id="loop-icon">Loop: Off</button>
+        </div>        
+        <script src="./js/script.js"></script>
+        <script src="./js/music.js"></script>
+        <script src="./js/plugin.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+            } // End if
+        });
+        });
+        </script>
+    </body>
+</html>
