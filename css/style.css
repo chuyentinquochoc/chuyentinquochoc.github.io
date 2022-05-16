@@ -173,6 +173,13 @@ section img {
     font-family: "Times New Roman", serif;
     text-align: center;
     text-decoration: none;
+    font-weight: 50;
+}
+
+#desimg {
+    width: 300px;
+    height: auto;
+    position: relative;
 }
 
 .links {
