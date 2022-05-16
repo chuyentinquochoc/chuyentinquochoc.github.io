@@ -196,6 +196,7 @@ section img {
     white-space: nowrap;
     z-index: 9;
     opacity: 1;
+    transform: scale(0.8);
 }
 
 .inner-divider-half {
